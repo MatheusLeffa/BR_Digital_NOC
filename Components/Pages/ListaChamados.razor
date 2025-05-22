@@ -1,0 +1,27 @@
+@page "/lista-chamados"
+@rendermode InteractiveServer
+@using BR_Digital.Models
+
+<table class="table table-striped-columns table-dark">
+    <thead>
+        <tr>
+            <th>chamado</th>
+            <th>cliente</th>
+            <th>trecho</th>
+            <th>status</th>
+            <th>tipo/aplic</th>
+            <th>abertura</th>
+            <th>interação</th>
+            <th>opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Conteúdo da tabela será inserido aqui -->
+    </tbody>
+</table>
+
+@code {
+    public List<Chamado> ListaChamado { get; set; } = new();
+
+    Chamado chamado1 = new Chamado(334567, "VIVO", "este / aquele", "backbone-tx", "fibra pagada");
+}
